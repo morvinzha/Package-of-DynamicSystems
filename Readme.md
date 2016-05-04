@@ -12,8 +12,8 @@ Dyn::DynamicSystem
 Npoint=100                # How many points do you want to plot in each path?
 Npath=20                  # How many path do you want to plot in this graph?
 resol=0.01                # How "long"(time step) is each point to the next point.
-width=0.05                # How wide is the initial point of each path to the next one  
-Op="s"                    # Another option is  Op == "PNG", to creat a .PNG file of this graph.
+width=0.05                # How wide is the initial point of each path to the next one(along +x direction).  
+Op="s"                    # Another option is  Op = "PNG", to creat a .PNG file of this graph.
 ```
 #### Example
 **The Dynamic system is:**
@@ -27,6 +27,9 @@ $f(\begin{bmatrix}
 	     		     	\end{bmatrix}$ and $x_0 = \begin{bmatrix}
 	     	-2\\ -2
 	     	\end{bmatrix} $
+
+**The codes are:**
+
 ```
 julia> function f(x)
        return [2*x[1]-x[1]*x[2];2*x[1]*x[1]-x[2]]
